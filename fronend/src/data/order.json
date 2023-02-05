@@ -1,0 +1,94 @@
+[
+    {
+        "_id": 1234,
+        "startDate": "8 Mar",
+        "endDate": "20 Mar",
+        "hostId": "u102",
+        "buyer": {
+            "_id": "u102",
+            "fullname": "Bob Arnold"
+        },
+        "totalPrice": 1190,
+        "guests": {
+            "adults": 3,
+            "kids": 1
+        },
+        "stay": {
+            "_id": "vfvdvdfvfdbfgbf",
+            "name": "Westin House",
+            "price": 595.00
+        },
+        "msgs": [],
+        "status": "Declined",
+        "requests": ""
+    },
+    {
+        "_id": 1235,
+        "startDate": "1 Mar",
+        "endDate": "3 Mar",
+        "hostId": "u102",
+        "buyer": {
+            "_id": "u102",
+            "fullname": "Josh Benishu"
+        },
+        "totalPrice": 1690,
+        "guests": {
+            "adults": 1,
+            "kids": 1
+        },
+        "stay": {
+            "_id": "621f337a75c7d36e498aaaf8",
+            "name": "Fun Village",
+            "price": 80.00
+        },
+        "msgs": [],
+        "status": "Pending",
+        "requests": ""
+    },
+    {
+        "_id": 1239,
+        "startDate": "15 Mar",
+        "endDate": "17 Mar",
+        "hostId": "u102",
+        "buyer": {
+            "_id": "u102",
+            "fullname": "Ronaldo Fatig"
+        },
+        "totalPrice": 1600,
+        "guests": {
+            "adults": 2,
+            "kids": 1
+        },
+        "stay": {
+            "_id": "h102",
+            "name": "De Lucs",
+            "price": 809.00
+        },
+        "msgs": [],
+        "status": "Approved",
+        "requests": ""
+    },
+    {
+        "_id": "o1225",
+        "startDate": "10 Jan",
+        "endDate": "17 Jan",
+        "hostId": "u102",
+        "buyer": {
+            "_id": "u102",
+            "fullname": "Jon Mike"
+        },
+        "totalPrice": 760,
+        "guests": {
+            "adults": 5,
+            "kids": 1
+        },
+        "stay": {
+            "_id": "h102",
+            "name": "With Freinds",
+            "price": 900.00
+        },
+        "msgs": [],
+        "status": "Approved",
+        "requests": ""
+    }
+]

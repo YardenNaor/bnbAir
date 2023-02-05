@@ -1,0 +1,35 @@
+.TitleContant{
+    grid-column: 2;
+    width: 100%;
+    position: relative;
+
+    .titles-container{
+        padding-top: em(24px);
+    }
+}
+
+.secendTitl{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.startTitle{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.titleStay{
+    font-size: 26px;
+}
+
+.reviewsBtnTitle{
+    text-decoration: underline;
+}
+.titlAddres{
+    margin-left: 20px;
+}
+
+
+

@@ -1,0 +1,140 @@
+.filter-carousel-container {
+    display: flex;
+    grid-column: 2;
+    // position: fixed;
+    width: 91.67vw;
+    // transform: translate(-23px);
+    // overflow: hidden;
+    align-items: flex-start;
+    padding: em(24px) 0;
+    // margin-bottom: 80px;
+    justify-content: space-between;
+
+
+    .filter-btn {
+        margin-top: 0;
+        width: 91px;
+        min-height: 48px;
+        padding: 0 em(15px);
+        margin-inline-start: 30px;
+
+        .content-container {
+            span {
+
+                padding-inline-start: em(8px);
+            }
+        }
+
+    }
+
+    .css-69z67c-MuiTabs-scroller {
+        max-width: 83vw;
+
+
+        // .css-1ujnqem-MuiTabs-root {
+
+        // }
+
+        .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+            width: 64px;
+            min-height: 64px;
+            padding: 0 1rem;
+
+        }
+    }
+
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+
+        color: $clr11;
+        opacity: 1;
+    }
+
+    .css-145v6pe-MuiButtonBase-root-MuiTabScrollButton-root.Mui-disabled {
+        opacity: 0.5;
+    }
+
+    .css-1aquho2-MuiTabs-indicator {
+        display: none;
+    }
+
+    .MuiTabs-scrollButtons:not(.filter-btn) {
+        // position: absolute;
+        margin-bottom: 35px;
+        background-color: $clr1;
+        box-shadow: 1px 0px 8px 19px $clr1;
+        width: 26px;
+
+    }
+
+    // .MuiTabs-scrollButtons {
+    //     height: 100%;
+    //     background-color: aqua;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+    .css-ptiqhd-MuiSvgIcon-root {
+        border: 1px solid $clr5;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        transition: 0.5s;
+
+        &:hover {
+            box-shadow: 1px 1px 3px 1px $clr5;
+        }
+
+    }
+
+    .type-container {
+        display: grid;
+        align-items: center;
+        // justify-content: space-between;
+        min-width: 64px;
+        // min-height: 64px;
+        opacity: 0.7;
+        transition: opacity 0.5s;
+        border-bottom: 2px solid $clr1;
+
+        &:first-of-type {
+            padding-left: 0px;
+        }
+
+
+        &:hover {
+            opacity: 1;
+            border-bottom: 2px solid $clr5;
+
+        }
+
+        &:target {
+            border-bottom: 2px solid $clr11;
+            opacity: 1;
+        }
+
+
+
+
+
+        img {
+            width: 24px;
+            justify-self: center;
+        }
+
+        p {
+            width: max-content;
+            margin-top: 5px;
+            display: inline-block;
+            justify-self: center;
+            // padding-inline-start: em(5px);
+            // text-align: center;
+            font-family: 'Circular';
+            font-size: rem(12px);
+            text-transform: none;
+            padding: em(16px) 0;
+
+        }
+    }
+
+}

@@ -1,0 +1,137 @@
+.trip-containter {
+    width: 100vw;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 20vw 1fr 20vw;
+
+    font-family: 'Circular';
+    font-size: 28px;
+    height: 96px;
+    line-height: 1.43;
+    color: #222;
+
+    position: absolute;
+    top: 120px;
+
+    .trip-data {
+        // background-color: aqua;
+        // display: flex;
+        // flex-direction: row-reverse;
+        padding: 20px;
+        padding-inline-start: 0;
+    }
+
+    .trip-headers {
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        .trip-header {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.trip-containter>* {
+    grid-column: 2;
+    grid-row-gap: 70px;
+}
+
+.data-body {
+    font-family: 'Circular';
+    font-size: 14px;
+
+    .trip-body-containter {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-top: 1px solid $clr5;
+        align-items: center;
+        // .trip-body {
+
+        // }
+        .trip-body.image {
+            display: flex;
+            justify-content: left;
+
+            .trip-image {
+                width: 90px;
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+//     // .trip-thead {
+//     //     font-size: 14px;
+//     //     text-align: left;
+//     // }
+
+//     // .trip-td {
+//     //     padding-bottom: 25px;
+//     //     text-align: left;
+
+
+//     // }
+
+//     .trip-image {
+//         width: 150px;
+//         border-radius: 12px;
+
+//     }
+
+//     .trip-table {
+//         width: 100%;
+//         height: auto;
+//         display: grid;
+//         grid-template-columns: repeat(7, 1fr);
+//         // border-collapse: collapse;
+
+//     }
+
+//     .trip-td-body {
+
+//         padding: 20px 5px;
+//         text-align: left;
+//         font-size: 14px;
+
+//         .image {
+//             // display: flex;
+//             // justify-content: center;
+//         }
+
+
+//     }
+
+// }
+
+// // .trip-tr-body.price:only-child{
+// //     background-color: blue;
+// // }
+
+// .trip-header {
+//     padding-bottom: 60px;
+// }
+
+.Declined {
+    color: red;
+}
+
+.Approved {
+    color: green;
+}
+
+.Pending {
+    color: orange;
+}
+
+.trip-tr {
+    border-bottom: 1px solid;
+}
+
+// .trip-tr-body {
+//     height: auto;
+//     border-bottom: 1px solid;
+// }

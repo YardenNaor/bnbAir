@@ -1,0 +1,15 @@
+ul{
+    padding-inline-start: 0px;
+}
+.home-list {
+    // height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(221.7px, 1fr));
+    // grid-template-columns: repeat(auto-fill, minmax(227px, 300px));
+    grid-gap: $break-grid-row-gap $break-grid-col-gap;
+    &:last-child{
+        grid-gap:0px 0px;
+    }
+    grid-auto-flow: row dense;
+    list-style-type: none;   
+}

@@ -1,0 +1,16 @@
+
+.containter-wish-list{
+    position: absolute;
+    top: 300px;
+
+    .header-wish-list{
+        font-size: 32px;
+        font-family: 'Circular-bold';
+        display: flex ;
+        flex-wrap: wrap;
+    }
+    .main-select-wish{
+        background-color: antiquewhite;
+        display: grid;
+    }
+}

@@ -1,0 +1,418 @@
+.book {
+    display: grid;
+    grid-template-columns: 20vw 1fr 20vw;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    ;
+    grid-template-areas:
+        ". title ."
+        ". main . "
+        ". footer .";
+
+    .RequestTitle {
+        grid-area: title;
+        font-size: 16px;
+        padding-bottom: 32px;
+    }
+
+    .backto {
+        font-size: 16px;
+        line-height: 20px;
+        padding-right: 32px;
+    }
+
+    .RequestTitleContant {
+        line-height: 20px;
+        padding-bottom: 16px;
+        padding-top: 64px;
+        display: flex;
+    }
+
+    .RequestTitleContantTitle {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .mainBook {
+        grid-area: main;
+        display: flex;
+        justify-content: space-between;
+
+        .pay {
+            position: relative;
+            width: 560px;
+
+            .YourTrip {
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 26px;
+                padding-bottom: 24px;
+            }
+
+            .YourTripData {
+                display: flex;
+                font-size: 16px;
+                justify-content: space-between;
+                padding-bottom: 24px;
+            }
+
+            .firsDetail {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .secendDetail {
+                font-size: 16px;
+                margin-top: 8px;
+            }
+
+            .edit {
+                position: relative;
+                display: flex;
+                bottom: 5px;
+                flex-direction: column;
+                justify-content: flex-start;
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+            }
+
+            .required {
+                border-top: 1px solid lightgray;
+                padding-top: 32px;
+                padding-bottom: 24px;
+
+                .requiredTitle {
+                    display: flex;
+                    justify-content: flex-start;
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+
+                .break {
+                    line-height: 20px;
+                    padding-top: 16px;
+                }
+
+                .message {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                }
+
+                .messageExp {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin-top: 4px;
+                }
+
+                .host {
+                    padding-bottom: 32px;
+                    padding-top: 16px;
+
+                    .hostDetContant {
+                        display: flex;
+                        line-height: 18px;
+
+                        .hostImg {
+                            height: 42px;
+                            line-height: 18px;
+                            position: static;
+                            vertical-align: bottom;
+                            width: 42px;
+                            border-radius: 50%;
+                        }
+
+                        .hostDet {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            line-height: 20px;
+                            padding-left: 16px;
+
+                            .hostName {
+                                font-size: 16px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+                .msgDiv {
+                    padding: 4px;
+                    padding-left: 0;
+                    margin-bottom: 15px;
+
+                    .textarea {
+                        border-image-repeat: stretch;
+                        border-image-slice: 100%;
+                        border-image-width: 1;
+                        font-size: 16px;
+                        font-weight: 400;
+                        max-width: 100%;
+                        min-width: 100%;
+                        padding: 8px;
+                    }
+                }
+
+                .confirmed {
+                    font-size: 16px;
+                    padding-bottom: 24px;
+                    padding-top: 32px;
+                    border-top: 1px solid lightgray;
+                    border-bottom: 1px solid lightgray;
+
+                    .confirmedContant {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+
+
+
+                        .confirmedImg {
+                            fill: rgb(227, 28, 95);
+                            stroke: black;
+                            height: 32px;
+                            width: 32px;
+                        }
+
+                        .confirmedTxt {
+                            display: flex;
+                            margin-left: 10px;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            .confirmedFirst {
+                                font-size: 16px;
+                                font-weight: 600;
+                            }
+
+                            .confirmedSecend {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+            .requestContainer {
+                display: flex;
+                justify-content: center;
+
+                .request {
+                    --mouse-x: 50;
+                    --mouse-y: 50;
+                    position: relative;
+                    right: 5px;
+                    // top: 31px;
+                    background-size: 200% 200%;
+                    background-color: $clr2;
+                    color: white;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 7px;
+                    font-size: 16px;
+                    font-family: $font1;
+                    height: 56px;
+                    text-align: center;
+                    width: 204.067px;
+                    margin-top: 25px;
+                }
+            }
+        }
+
+
+
+        .details {
+            margin-left: 90px;
+            position: relative;
+            width: 466.667px;
+
+            .detailsBox {
+                position: sticky;
+                top: 80px;
+                width: 466.667px;
+
+                .detailsBoxContant {
+                    font-family:$font1;
+                    border-bottom-color: rgb(221, 221, 221);
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                    border-bottom-style: solid;
+                    border-bottom-width: 1px;
+                    border-image-outset: 0;
+                    border-left-color: rgb(221, 221, 221);
+                    border-left-width: 1px;
+                    border-left-style: solid;
+                    border-right-color: rgb(221, 221, 221);
+                    border-right-style: solid;
+                    border-right-width: 1px;
+                    border-top-color: rgb(221, 221, 221);
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                    border-top-style: solid;
+                    border-top-width: 1px;
+                    font-size: 16px;
+                    margin-bottom: 88px;
+                    padding: 24px;
+
+                    .boxTitle {
+                        padding-bottom: 24px;
+                        border-bottom: 1px solid lightgray;
+
+                        .boxTitleContant {
+                            display: flex;
+
+                            .titleImg {
+                                border-radius: 0.5rem;
+                                object-fit: cover;
+                                vertical-align: bottom;
+                                width: 124px;
+                                height: 106px;
+                            }
+
+                            .titles {
+                                display: flex;
+                                flex-direction: column;
+                                padding-left: 12px;
+
+                                .firstTitle {
+                                    color: rgb(113, 113, 113);
+                                    display: flow-root;
+                                    font-size: 12px;
+                                }
+
+                                .secendTitle {
+                                    display: flow-root;
+                                    font-size: 14px;
+                                    margin-top: 4px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .protected {
+                        padding: 24px 0px;
+                        border-bottom: 1px solid lightgray;
+
+                        .protectedContant {
+                            font-size: 16px;
+                        }
+
+                    }
+
+                    .priceTitleContainer {
+                        padding: 24px 0px;
+
+                        .priceTitleContant {
+                            font-size: 22px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .priceDet {
+
+                        .priceDetContainer {
+                            display: flex;
+                            align-items: center;
+                            font-size: 16px;
+                            justify-content: space-between;
+
+                            &.secend {
+                                margin-top: 16px;
+
+                            }
+
+                            .breakLine {
+                                border-bottom-color: rgb(221, 221, 221);
+                                border-bottom-style: solid;
+                                border-bottom-width: 1px;
+                                line-break: strict;
+                                line-height: 20px;
+                                margin: 24px 0px;
+                                box-sizing: border-box;
+                            }
+                        }
+
+
+                        .calc {
+                            font-size: 16px;
+                            text-align: left;
+                        }
+
+                        .resolve {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .bookFooter {
+        grid-area: footer;
+        background-color: rgb(247, 247, 247);
+    }
+
+    .aprove {
+        background-color: #d5d5d579;
+        position: fixed;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .aproveContant {
+            box-shadow: 3px 4px 10px 0 $clr5;
+            background-color: $clr1;
+            color: $clr11;
+            border-radius: 1rem;
+            font-family: $font1;
+            min-height: 500px;
+            width: 460px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 em(14px);
+            justify-content: center;
+            align-items: center;
+            border: 1px solid lightgray;
+
+        }
+
+        .Congrat {
+            font-size: rem(24px);
+            font-weight: 400;
+            padding-bottom: 15px;
+            color: #de1361;
+        }
+
+        .title {
+
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+            line-height: em(25px);
+            width: 90%;
+            // padding-bottom: 20px;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+
+        .therdTitle {
+            color: $clr9;
+            margin-top: 50px;
+        }
+    }
+
+}

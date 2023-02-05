@@ -1,0 +1,17 @@
+.stays{
+   display: grid;
+   font-family:  -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;;
+   grid-template-columns: 20vw 1fr 20vw;
+   // minmax(auto,392px) 1fr minmax(auto,392px);
+   // grid-template-areas:
+   // ". main .";
+
+   .detailesMain{
+      // grid-area: main;
+      grid-column: 2;
+
+   }
+} 
+
+
+

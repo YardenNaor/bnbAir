@@ -1,0 +1,34 @@
+// layouts
+.main-layout {
+
+    display: grid;
+    grid-template-columns:  $layoutPadding 1fr $layoutPadding;
+
+    >* {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
+
+    // Narrow:
+    @include for-narrow-layout {
+        @include getMainLayout($break-narrow)
+    }
+
+    // Normal:
+    @include for-normal-layout {
+        @include getMainLayout($break-normal)
+    }
+
+    // Wide:
+    @include for-wide-layout {
+        @include getMainLayout($break-wide)
+    }
+}
+
+.try {
+    background-color: antiquewhite;
+}
+

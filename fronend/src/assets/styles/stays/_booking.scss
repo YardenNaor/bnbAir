@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+.booking {
+    grid-area: detailsRight;
+    font-family: 'Circular';
+
+    .date-filter.booking {
+        
+        // width: max-content;
+        // position: sticky;
+
+        .close-btn {
+            color: $clr1;
+            background-color: $clr11;
+            font-size: rem(16px);
+            width: 70px;
+            padding: em(10px);
+            border-radius: 1rem;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .bookingBox {
+        position: sticky;
+        // display: flex;
+        flex-direction: column;
+        margin-left: 90px;
+        margin-top: 37px;
+        margin-bottom: 46px;
+        top: 127px;
+        height: 460px;
+        width: 368px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
+        padding: 24px;
+        outline: 1px solid $clr5;
+        border-radius: 12px;
+        z-index: 3;
+
+        
+    }
+
+
+
+    .boxContantTop {
+
+        height: 112px;
+        width: 322px;
+        border-radius: 5px;
+        position: relative;
+        top: 20px;
+        right: 1px;
+        outline: 1px solid $clr5;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .topBookingBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: centers;
+    }
+
+
+
+    .reviewsBtn {
+        text-decoration: underline;
+        color: rgb(159 159 159);
+        font-family: apple-system;
+        font-size: 14px;
+    }
+
+    .checkInBtn {
+        margin: 0px;
+        min-height: 50%;
+        outline: 1px solid $clr5;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        cursor: pointer;
+
+        span {
+            // align-self: baseline;
+            padding: em(10px);
+            padding-bottom: 0;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: rem(14px);
+            padding-inline-start: em(10px);
+            margin: 0;
+        }
+
+        
+    }
+
+    .times {
+
+        display: grid;
+        outline: 1px solid $clr5;
+
+       
+    }
+
+    .guests {
+        display: grid;
+        justify-content: start;
+        height: 50%;
+        margin: 0px;
+        padding: 0;
+        z-index: 1;
+        outline: 1px solid $clr5;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        span {
+            // align-self: baseline;
+            padding: em(10px);
+            padding-bottom: 0;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: rem(14px);
+            // padding-inline-start: em(10px);
+            margin: 0;
+        }
+
+    }
+
+    .guests:focus {
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    .guestsModal {
+        padding: em(10px) em(15px);
+        width: 100%;
+        height: auto;
+        border: 1px solid $clr5;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 6;
+        width: 322px;
+        margin-top: 33px;
+        background-color: $clr1;
+
+
+
+    }
+
+    .capacityLabel {
+        margin-bottom: 24px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:first-of-type) {
+            margin-top: 24px;
+        }
+
+        .desc {
+            font-size: rem(14px);
+            color: $clr9;
+        }
+
+    }
+
+
+    .chosingGuests {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100px;
+
+    }
+
+    .chosingGuestsBtn {
+        justify-content: center;
+        display: flex;
+        width: 20px;
+        border-radius: 50%;
+        border: 1px solid $clr5;
+    }
+
+    .chosingGuestsBtn:hover {
+        border: 1px solid black;
+
+    }
+
+    .descriptionGuests {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .reservBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 48px;
+        padding: 6px 1px;
+        margin-block-start: 40px;
+        background-color: #de1361;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 7px;
+        font-size: 16px;
+        font-family: 'Raleway', sans-serif;
+
+    }
+
+    .wontharged {
+        margin-block-start: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .sum {
+        margin-block-start: 10px;
+        border-bottom: 1px solid $clr5;
+        height: 82px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .billingCalc {
+        // position: relative;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-family: 'apple-system';
+    }
+
+    .extraInfo {
+        height: 100%;
+    }
+
+    .price {
+        padding-inline-start: 0;
+        font-size: 22px;
+        line-height: 26px;
+        width: auto;
+    }
+
+    .currency {
+        padding: em(15.625px) 0;
+        font-size: 25px;
+        // right: 5px;
+    }
+
+    .night {
+        color: rgb(34, 34, 34);
+        font-size: 16px;
+        font-weight: 100;
+        font-family: apple-system;
+    }
+
+    .rate {
+        font-size: 14px;
+        align-self: center;
+        padding-top: em(18px);
+    }
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+        margin-block-start: 24px;
+    }
+
+    .calender {
+        background-color: white;
+        position: relative;
+        bottom: 500px;
+        right: 1000px;
+        width: 570px;
+        border: 1px solid;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+    }
+}

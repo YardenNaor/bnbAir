@@ -1,0 +1,330 @@
+.stayMenegment {
+    display: grid;
+    font-family: $font1;
+    ;
+    grid-template-columns: 20vw 1fr 20vw;
+    grid-template-areas:
+        ". main . ";
+    padding: em(70px);
+    // justify-content: space-between;
+
+    .menegmentContant {
+
+        grid-column: 2;
+        height: 350px;
+        width: 100%px;
+
+
+        .contantTitle {
+            padding-bottom: em(30px);
+            // height: 65px;
+            font-size: 20px;
+            // font-weight: 600;
+        }
+
+        .tableHead {
+            display: flex;
+            width: 100%;
+            background-color: $clr3;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 400;
+            font-size: rem(15px);
+            padding-inline-start: 15px;
+            // margin-inline-start: 15px;
+            gap: 5px
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+
+
+        }
+
+        .stayTable {
+            display: flex;
+            flex-direction: column;
+            height: 235px;
+            overflow-y: auto;
+            ;
+
+
+            .stayRow {
+                display: flex;
+
+
+                .stayRow {
+                    padding: 10px 5px;
+                    border-bottom: 1px solid lightgray;
+                }
+
+                .cell {
+                    display: flex;
+
+
+
+                }
+
+                .stay {
+                    width: 130px;
+                }
+
+
+
+                .price {
+                    width: 130px;
+                }
+
+                .rate {
+                    width: 60px;
+                }
+
+                .orders {
+                    width: 130px;
+                }
+
+                .actions {
+                    width: 130px;
+                }
+            }
+        }
+
+        .menegmentTable {
+          
+            display: flex;
+            flex-direction: column-reverse;
+
+            // height: 235px;
+            overflow-y: auto;
+
+            .tableRow {
+                padding: 10px 5px;
+                border-bottom: 1px solid lightgray;
+                // justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .cell {
+            display: flex;
+            padding: em(10px);
+
+            &.head {
+                padding-left: 20px;
+            }
+
+            // background-color: aqua;
+        }
+
+        .guest {
+            width: 130px;
+            &.head{
+                padding-left: 5px;
+            }
+        }
+
+        .stay {
+            width: 130px;
+
+            &.head {
+                padding-left: 30px;
+                justify-self: center;
+                align-self: center;
+            }
+        }
+
+        .dates {
+            width: 130px;
+
+            &.check-in {
+
+                &.head {
+                    padding-left: 25px;
+                }
+            }
+
+
+
+        }
+
+        .price {
+            width: 60px;
+
+            &.head {
+                padding-left: 15px;
+            }
+        }
+
+        .status {
+            width: 130px;
+            justify-content: center;
+            // align-self: center;
+        }
+
+        .actions {
+            width: 130px;
+
+            &.head {
+                // justify-content: end;
+                margin-left: 40px;
+            }
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            min-width: 70px;
+            background-color: $clr1;
+            box-shadow: 2px 3px 4px 0 $clr5;
+            padding: 10px;
+            color: $clr1;
+            font-size: 1rem;
+            transition: box-shadow 0.5s;
+
+            &:hover:not(:disabled){
+                box-shadow: 2px 3px 5px 3px $clr5;
+            }
+
+            &.approveBtn {
+                background-color: rgb(38, 161, 38);
+
+                &:disabled {
+                    background-color: rgb(170, 227, 170);
+                    cursor: not-allowed;
+                }
+            }
+
+            &.rejectBtn {
+                background-color: rgb(235, 64, 64);
+
+                &:disabled {
+                    background-color: rgb(220, 158, 158);
+                    cursor: not-allowed;
+                }
+            }
+
+
+        }
+
+        .approve {
+            color: rgb(50, 211, 50);
+        }
+
+        .reject {
+            color: rgb(235, 64, 64);
+        }
+
+
+
+        .approveBtn {
+            display: flex;
+            align-items: center;
+            // border: 1px solid rgb(50, 211, 50);
+            border-radius: 10px;
+        }
+
+        .approveBtn:active {
+            background-color: rgb(50, 211, 50);
+            ;
+        }
+
+        .rejectBtn {
+            display: flex;
+            align-items: center;
+            // border: 1px solid rgb(235, 64, 64);
+            border-radius: 10px;
+        }
+
+        .rejectBtn:active {
+            background-color: $clr2;
+        }
+
+        .gustImg {
+
+            border-radius: 1rem;
+            height: 28px;
+            width: 28px;
+            margin-inline-start: 10px;
+        }
+
+
+
+    }
+}
+
+.trip-containter {
+    width: 100vw;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+
+    font-family: 'Circular';
+    font-size: 28px;
+    height: 96px;
+    line-height: 1.43;
+    color: #222;
+
+    position: absolute;
+    top: 120px;
+}
+
+.trip-containter>* {
+    grid-column: 2;
+    grid-row-gap: 70px;
+
+
+    .trip-thead {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .trip-td {
+        padding-bottom: 25px;
+    }
+
+    .trip-image {
+        width: 150px;
+        border-radius: 12px;
+
+    }
+
+    .trip-table {
+        width: 100%;
+        height: auto;
+    }
+
+    .trip-td-body {
+        text-align: left;
+        font-size: 14px;
+        padding-bottom: 20px;
+
+    }
+
+}
+
+// .trip-tr-body.price:only-child{
+//     background-color: blue;
+// }
+
+.trip-header {
+    padding-bottom: 60px;
+}
+
+.decline {
+    color: red;
+}
+
+.approve {
+    color: green;
+}
+
+.pending {
+    color: orange;
+}
+
+.trip-tr-body {
+    height: auto;
+}

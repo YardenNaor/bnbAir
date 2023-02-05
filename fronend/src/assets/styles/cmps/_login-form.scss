@@ -1,0 +1,135 @@
+.login-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 568px;
+    min-height: 618px;
+    padding: em(24px);
+    background-color: $clr1;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
+    border-radius: 2rem;
+    z-index: 10;
+    transition: top 1s;
+    animation-name: login;
+    animation-duration: 1s;
+    // text-align: center;
+
+
+
+    header {
+        // display: flex;
+        // grid-template-columns: max-content 1fr;
+        // align-items: center;
+        // justify-content: center;
+        font-size: rem(16px);
+        line-height: em(20px);
+        // width: 416px;
+        min-height: 64px;
+        border-bottom: 1px solid $clr5;
+
+        .header-txt {
+            // display: block;
+            // margin: 0;
+            text-align: center;
+        }
+
+
+    }
+
+
+
+    .title {
+        // display: block;
+        padding: em(24px);
+        font-size: rem(22px);
+
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+            line-height: em(20px);
+            border: 1px solid $clr5 ;
+            font-size: 1rem;
+            width: 520px;
+            min-height: 20px;
+            padding-top: em(26px);
+            padding-bottom: em(10px);
+            padding-right: em(36px);
+            padding-left: em(12px);
+            border-radius: 0.5rem;
+            margin: 12px;
+        }
+
+        a {
+            text-align: center;
+            color: inherit;
+        }
+
+        button {
+            width: 520px;
+            min-height: 48px;
+            background-color: #db0e63;
+            font-size: 1rem;
+            color: $clr1;
+            font-family: 'Circular';
+            border-radius: 0.5rem;
+
+        }
+
+        // input[field=text]{
+        //     background-color: aqua;
+        //     min-height: 20px;
+        // }
+
+
+    }
+
+    &.show {
+        top: 50%;
+
+    }
+
+    &.hide {
+        top: 150%;
+        display: none
+    }
+
+
+}
+
+.x-btn {
+    position: relative;
+    top: 30px;
+    left: 5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // justify-self: start;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: $clr5;
+    }
+
+    svg {
+        display: block;
+        fill: none;
+        height: 12px;
+        width: 12px;
+        stroke: currentcolor;
+        stroke-width: 4;
+        overflow: visible;
+    }
+}

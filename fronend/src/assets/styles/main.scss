@@ -1,0 +1,57 @@
+// Setup
+@import "setup/fonts";
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+// @import "setup/typography";
+
+@import "./basics/svg.scss";
+
+// Basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+@import "basics/links";
+@import "basics/forms";
+
+
+// Views
+@import "views/about-us";
+// @import "views/home-page";
+@import "./views/home-page";
+@import "views/review-app";
+@import "views/user-details";
+@import "./stays/stays.scss";
+@import "./basics/bookLayout.scss";
+@import "./views/stayMenegment";
+@import "./views/wishList";
+@import "./views/trip";
+
+// Components
+@import "cmps/home-list";
+@import "cmps/stay-preview";
+@import "cmps/app-header";
+@import "cmps/app-footer";
+@import "cmps/user-msg";
+@import "./cmps/image-slider";
+@import "./cmps/login-form";
+@import "./cmps/filter-carousel";
+@import "./cmps/filter-modal";
+@import "./cmps/select-wish-list";
+@import "./cmps/chart-buyer";
+
+@import "./stays/staysHeader";
+@import "./stays/detailes.scss";
+@import "./stays/booking.scss";
+@import "./stays/reviwes.scss";
+@import "./stays/place.scss";
+@import "./stays/hosted-left.scss";
+@import "./stays/hosted-right.scss";
+@import "./stays/to-know.scss";
+@import "./stays/first-footer.scss";
+@import "./stays/secend-footer.scss";
+@import "./stays/galery.scss";
+@import "cmps/filter.scss";
+
+
+
