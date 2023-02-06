@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9fed020e.css",
+    "main.js": "/static/js/main.9db6d0d7.js",
+    "static/media/dog1.jpg": "/static/media/dog1.dc7f568287aff83709b9.jpg",
+    "static/media/Roboto-Medium.ttf": "/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "static/media/Roboto-Light.ttf": "/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
+    "service-worker.js": "/service-worker.js",
+    "static/media/flexible.jpg": "/static/media/flexible.ea4bee9a8ae36c0e3395.jpg",
+    "static/media/xbtn2.png": "/static/media/xbtn2.04c1e644d5930c0cbe10.png",
+    "static/media/our-logo.png": "/static/media/our-logo.71283fd3e8fc849bdd98.png",
+    "static/media/pool.svg": "/static/media/pool.db08c161c099edefa3a96af4b215eb35.svg",
+    "static/media/wifii.svg": "/static/media/wifii.76079658e4f88551e542d26c45559a61.svg",
+    "static/media/bbqgrill.svg": "/static/media/bbqgrill.942a286cf057bb30585fe10f55b2d22c.svg",
+    "static/media/i18n.svg": "/static/media/i18n.6a047133bea8f0620c8bb38c0855332f.svg",
+    "static/media/confirmed.svg": "/static/media/confirmed.5aeb60b17ea4723826f3125a89eda566.svg",
+    "static/media/Kitchen.svg": "/static/media/Kitchen.4236b3c0d2bf364334ed35cbe545887c.svg",
+    "static/media/AC.svg": "/static/media/AC.71adab9f5c893fcce170315e8a04ff9d.svg",
+    "static/media/parking.svg": "/static/media/parking.411d7ff187c24c21a6f1c0487cd60bd8.svg",
+    "static/media/Self-check-in.svg": "/static/media/Self-check-in.4daf32be0ba34724197cbef451684d17.svg",
+    "static/media/DedicatedWorkspace.svg": "/static/media/DedicatedWorkspace.d2b6c46e25d93020abb967e2601ae27a.svg",
+    "index.html": "/index.html",
+    "static/media/Gameconsole.svg": "/static/media/Gameconsole.737763d4edd5face57b519b2bf6afcae.svg",
+    "static/media/user-default.svg": "/static/media/user-default.f3fb1f2291e17b9f958cb8f14d737554.svg",
+    "static/media/dubelBed.svg": "/static/media/dubelBed.58838ec0f0b57897683e5a18ec79a481.svg",
+    "static/media/Oven.svg": "/static/media/Oven.5b51a3cfa3aec83826c01f32d0445162.svg",
+    "static/media/tv.svg": "/static/media/tv.19c812bc72f0eb926d5b55d0c21d1979.svg",
+    "static/media/Freezer.svg": "/static/media/Freezer.61053a1d15291c036ac55ca8ec3174c2.svg",
+    "static/media/hamburger.svg": "/static/media/hamburger.10c9aea2b362c8707c64c9e8ab026855.svg",
+    "main.9fed020e.css.map": "/static/css/main.9fed020e.css.map",
+    "main.9db6d0d7.js.map": "/static/js/main.9db6d0d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fed020e.css",
+    "static/js/main.9db6d0d7.js"
+  ]
+}
