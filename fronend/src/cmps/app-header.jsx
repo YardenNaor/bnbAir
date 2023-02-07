@@ -120,6 +120,8 @@ export function AppHeader({ }) {
         return txt
     }
 
+  console.log(divName)
+
     const { timeStampStart, timeStampEnd } = currFilterBy.datesRange
     return (
         <header className={divName}>
