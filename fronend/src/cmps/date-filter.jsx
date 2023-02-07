@@ -21,11 +21,8 @@ export function DateFilter({ handleChange, isBooking, setDateModal, dateModal })
     }, [startDate, endDate])
 
     return (
-        <section className={`date-filter ${isBooking && 'booking'} `} 
-        // onClick={(ev)=>console.log(':',)}
-        >
-            {isBooking && <div className="full-screen transparent show"
-                onClick={() => setDateModal(false)}></div>}
+        <section className={`date-filter ${isBooking && 'booking'} `}>
+
             <span className="title">Choose dates</span>
             <div className="calendar-container flex">
                 <>
