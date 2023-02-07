@@ -35,20 +35,20 @@ export function Book() {
 
 
     async function getNewOrder(HostId, price, timeStart, timeEnd, Adulst, kids, Infants, Pets, stay) {
-        console.log('stay at getNewOrder', stay)
+        // console.log('stay at getNewOrder', stay)
         const stayName = await stayService.getById(stay)
-        console.log('stayName at ger nae order:', stayName.name)
+        // console.log('stayName at ger nae order:', stayName.name)
         const newOrder = emptyOrder()
         newOrder.hostId = HostId
-        console.log('loggedinUser at getNewOrder:',loggedinUser)
+        // console.log('loggedinUser at getNewOrder:',loggedinUser)
         if (loggedinUser) newOrder.buyer = { "_id": loggedinUser._id, "fullname": loggedinUser.fullname }
-        console.log('newOrder.buyer:',newOrder.buyer)
+        // console.log('newOrder.buyer:',newOrder.buyer)
         newOrder.totalPrice = price
         newOrder.startDate = timeStart
         newOrder.endDate = timeEnd
         newOrder.guests = { Adulst, kids, Infants, Pets }
         newOrder.stay = { _id: stay, name: stayName.name }
-        console.log('stay ar getneworder:', stay)
+        // console.log('stay ar getneworder:', stay)
         // order.msgs = []
         newOrder.status = 'Pending'
         // console.log('new oreder:', newOrder.stay)

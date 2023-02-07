@@ -9,6 +9,7 @@ export function getActionRemoveOrder(orderId) {
     }
 }
 export function getActionAddOrder(order) {
+    
     return {
         type: ADD_ORDER,
         order
@@ -25,16 +26,14 @@ export function getActionUpdateOrder(order) {
 }
 
 
-// export async function loadStay(orderId) {
-//     try {
-//         const order = await orderService.getById(orderId)
-//         store.dispatch({ type: SET_ORDER    , order })
-//         return order
-//     } catch (err) {
-//         console.log('Cannot load order: ', err)
-//         throw err
-//     }
-// }
+export async function getMyOrders(loggedinUser) {
+    try {
+        const orders = await orderService.query(loggedinUser)
+        store.dispatch({ type: SET_ORDERS, orders })
+    } catch (err) {
+        console.log(err)
+    }
+}
 
 export async function loadOrder(orderId) {
     console.log('orderId at loadorder:',orderId)

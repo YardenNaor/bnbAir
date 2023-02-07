@@ -2,6 +2,18 @@ const logger = require('./logger.service')
 
 var gIo = null
 
+module.exports = {
+    // set up the sockets service and define the API
+    setupSocketAPI,
+    // emit to everyone / everyone in a specific room (label)
+    emitTo,
+    // emit to a specific user (if currently active in system)
+    emitToUser,
+    // Send to all sockets BUT not the current socket - if found
+    // (otherwise broadcast to a room / to all)
+    broadcast,
+}
+
 function setupSocketAPI(http) {
     gIo = require('socket.io')(http, {
         cors: {

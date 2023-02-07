@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { orderService } from '../../services/order.service'
+import { addOrder } from '../../store/order.action';
 
 
 export function Aprove({ order }) {
@@ -13,15 +14,11 @@ export function Aprove({ order }) {
 
 
     function backToHome() {
-        saveOrder()
+       addOrder(order)
         navigate(`/`)
 
     }
 
-    function saveOrder() {
-        console.log('order in saveOrder:',order)
-        orderService.save(order)
-    }
     return <section className="aprove">
         <div className="aproveContant">
             <div className='Congrat'>Congratulations! </div>
