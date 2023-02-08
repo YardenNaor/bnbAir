@@ -14,7 +14,7 @@ import { getMyOrders } from '../store/order.action'
 export function StayManagement() {
     const loggedinUser = useSelector((state) => state.userModule.user)
     const orders = useSelector((state) => state.orderModule.orders)
-   
+
 
     const [myStays, setMyStays] = useState([])
     const [myOrders, setMyOrders] = useState([])
@@ -25,10 +25,15 @@ export function StayManagement() {
     useEffect(() => {
         loadOrders()
         getMyStays()
-        getMyOrders({hostId: loggedinUser._id })
-        console.log('orders at StayManagement:',orders)
+        getMyOrders({ hostId: loggedinUser._id })
+        console.log('orders at StayManagement:', orders)
         setMyOrders(orders)
     }, [])
+
+    useEffect(() => {
+        setMyOrders(orders)
+    }, [orders])
+
 
 
     useEffect(() => {
@@ -60,13 +65,13 @@ export function StayManagement() {
     }
 
     async function changStatus(orderId, status) {
-        console.log('orderId at changStatus:',orderId)
+        console.log('orderId at changStatus:', orderId)
         try {
             const orderToUp = await loadOrder(orderId)
             console.log('orderToUp at changStatus', orderToUp)
             orderToUp.status = status
             updateOrder(orderToUp)
-            getMyOrders({hostId: loggedinUser._id })
+            getMyOrders({ hostId: loggedinUser._id })
         } catch (err) {
             console.log('failed to load order:')
         }

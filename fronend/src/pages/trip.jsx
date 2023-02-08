@@ -12,9 +12,9 @@ export function Trip() {
     const loggedinUser = useSelector((state) => state.userModule.user)
     const orders = useSelector((state) => state.orderModule.orders)
     const [myOrders, setMyOrders] = useState(null)
-    const [numStatusPending, setNumStatusPending] = useState(null)
-    const [numStatusApproved, setNumStatusApproved] = useState(null)
-    const [numStatusDeclined, setNumStatusDeclined] = useState(null)
+    // const [numStatusPending, setNumStatusPending] = useState(null)
+    // const [numStatusApproved, setNumStatusApproved] = useState(null)
+    // const [numStatusDeclined, setNumStatusDeclined] = useState(null)
     const [isImagesLoaded, setIsImagesLoaded] = useState(false)
 
 
@@ -26,17 +26,15 @@ export function Trip() {
     useEffect(() => {
         if (!loggedinUser) return
         const buyerId = loggedinUser._id
-        getMyOrders({buyerId})
-        setMyOrders(orders)
-        const objStatus = numStatusOrder(orders)
-        setNumStatusPending(objStatus.pending)
-        setNumStatusApproved(objStatus.approved)
-        setNumStatusDeclined(objStatus.declined)
-
-        // console.log(objStatus)
-        loadStayImages(orders)
+        getMyOrders({ buyerId })
+        // setMyOrders(orders)
+        // loadStayImages(orders)
     }, [])
 
+    useEffect(() => {
+        setMyOrders(orders)
+        loadStayImages(orders)
+    }, [orders])
 
 
     // console.log('hi'!)

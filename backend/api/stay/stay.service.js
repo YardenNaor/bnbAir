@@ -9,6 +9,7 @@ const ObjectId = require('mongodb').ObjectId
 // _arrangeStays(stays)
 
 async function query(filterBy = {}) {
+    console.log('filterBy at query:',filterBy)
     try {
         const criteria = _buildCriteria(filterBy)
         console.log('criteria at query of stays:', criteria)
@@ -98,7 +99,7 @@ async function removeStayMsg(stayId, msgId) {
 function _buildCriteria(filterBy = {}) {
     const criteria = {};
 
-    console.log("function_buildCriteria -> filterBy", filterBy)
+    console.log("function_buildCriteria -> filterBy", filterBy.capacity)
     if (filterBy.txt) {
         
         criteria.loc.country = { $regex: new RegExp(filterBy.txt, 'ig') }
@@ -115,7 +116,7 @@ function _buildCriteria(filterBy = {}) {
     }
     if (filterBy.capacity) {
         criteria.capacity = {
-            $gte: +filterBy.capacity || 0,
+            $gte: +filterBy.capacity.total || 0,
         }
     }
     return criteria;

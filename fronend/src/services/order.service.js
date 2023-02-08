@@ -29,6 +29,7 @@ const ROUTE = 'order'
 
 
 function query(filterBy = {}) {
+  // console.log('hi from query at orderservice:',)
   return httpService.get(ROUTE, { filterBy })
 }
 

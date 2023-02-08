@@ -27,8 +27,10 @@ export function getActionUpdateOrder(order) {
 
 
 export async function getMyOrders(loggedinUser) {
+    // console.log('hi from getMyOrders:',loggedinUser)
     try {
         const orders = await orderService.query(loggedinUser)
+        console.log('orders at getMyOrders:',orders)
         store.dispatch({ type: SET_ORDERS, orders })
     } catch (err) {
         console.log(err)

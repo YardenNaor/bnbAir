@@ -72,7 +72,7 @@ async function emitToUser({ type, data, userId }) {
         socket.emit(type, data)
     }else {
         logger.info(`No active socket for user: ${userId}`)
-        // _printSockets()
+        _printSockets()
     }
 }
 
@@ -100,6 +100,7 @@ async function broadcast({ type, data, room = null, userId }) {
 
 async function _getUserSocket(userId) {
     const sockets = await _getAllSockets()
+    console.log('sockets at _getUserSocket:',sockets )
     const socket = sockets.find(s => s.userId === userId)
     return socket
 }
