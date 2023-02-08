@@ -6,15 +6,16 @@ async function getStays(req, res) {
   console.log('gi from getstasys')
   try {
     logger.debug('Getting Stays')
-    // console.log('req.query at getStays at backend:',req.query)
+    console.log('req.query at getStays at backend:', JSON.parse(req.query.capacity))
+    // const filter = JSON.parse(req.query)
     const filterBy = {
       txt: req.query.txt || '',
       region: req.query.region || '',
       maxPrice: req.query.maxPrice || '',
       minPrice: req.query.minPrice || '',
-      capacity: req.query.capacity || '',
+      capacity: JSON.parse(req.query.capacity) || '',
     }
-    console.log('filterBy at getstays:',filterBy)
+    console.log('filterBy at getstays:', filterBy)
     const stays = await stayService.query(filterBy)
     res.json(stays)
   } catch (err) {
