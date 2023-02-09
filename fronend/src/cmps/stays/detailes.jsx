@@ -30,7 +30,7 @@ export function Detailes({ dates, setDates, stay, order, guestsNum, setguests, g
 
     function calcaAvgRate() {
 
-        const avg = utilService.getRandomIntInclusive(40,50)/10
+        const avg = utilService.getRandomIntInclusive(40, 50) / 10
         //  (rates.Cleanliness + rates.Communication + rates.CheckIn + rates.Accuracy + rates.Location + rates.Location) / 6
         return Math.floor(avg * 10) / 10
     }
@@ -54,11 +54,13 @@ export function Detailes({ dates, setDates, stay, order, guestsNum, setguests, g
     //     "Accuracy": 0,
     //     "Location": 0,
     //     "Value": 0
-    
-    return <section className="detailes">
 
-        <Booking dates={dates} img={img} setDates={setDates} stay={stay} order={order} guestsNum={guestsNum} setguests={setguests} guests={guests} rate={rate} avgRate={avgRate} capacityModal={capacityModal} setCapacityModal={setCapacityModal} dateModal={dateModal} setDateModal={setDateModal} handleChange={handleChange} />
-        <StayDetailesContent stay={stay} img={img} rate={rate} avgRate={avgRate} setCapacityModal={setCapacityModal} />
+    return <section className="detailes">
+        <div className='detailes-container'>
+            <StayDetailesContent stay={stay} img={img} rate={rate} avgRate={avgRate} setCapacityModal={setCapacityModal} />
+            <Booking dates={dates} img={img} setDates={setDates} stay={stay} order={order} guestsNum={guestsNum} setguests={setguests} guests={guests} rate={rate} avgRate={avgRate} capacityModal={capacityModal} setCapacityModal={setCapacityModal} dateModal={dateModal} setDateModal={setDateModal} handleChange={handleChange} />
+        </div>
+
 
     </section>
 }

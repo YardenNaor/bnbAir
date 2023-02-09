@@ -1,13 +1,57 @@
 .reviwes {
-    // grid-area: main;
-    position: relative;
-    top: 43px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    border-bottom: 1px solid lightgray;
-    border-top: 1px solid lightgray;
-    padding: 48px 0px;
+
+
+
+    //Mobaile
+    @include for-mobile-layout {}
+
+
+    // // Narrow:
+    // @include for-narrow-layout {
+    //     background-color: rgb(144, 36, 36);
+
+    // }
+
+    // Normal:
+    @include for-normal-layout {
+        padding: 0px 40px;
+
+        .reviwes-container {
+            border-bottom: 1px solid lightgray;
+            border-top: 1px solid lightgray;
+
+
+            .reviwes-txt {
+                margin: 48px 0px;
+
+            }
+
+        }
+
+    }
+
+    // Wide:
+    @include for-wide-layout {
+
+        padding: 0px 80px;
+
+
+
+        .reviwes-container {
+            margin: 0px 34.5px;
+            border-bottom: 1px solid lightgray;
+            border-top: 1px solid lightgray;
+
+            .reviwes-txt {
+                margin: 48px 0px;
+
+            }
+
+        }
+
+    }
+
+
 
 
     .reviwesEmpty {
@@ -17,7 +61,6 @@
         border-bottom: 1px solid lightgray;
         border-top: 1px solid lightgray;
         padding: 48px 0px;
-
     }
 
     .reviewTitle {
@@ -36,7 +79,6 @@
 
     .reviwesTable {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         align-content: flex-start;
         justify-content: flex-start;
@@ -75,7 +117,7 @@
     .scaleRate {
         align-content: center;
         width: 50%;
-        padding: 1px 8px;
+        padding: 1px 0px;
         margin-bottom: 10px;
         display: flex;
         justify-content: space-between;
@@ -113,13 +155,14 @@
 
     .reviewsMsg {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
 
         .reviewContant {
             width: 50%;
         }
 
-        .reviewTxt{
+        .reviewTxt {
             padding-right: 80px;
             margin-bottom: 40px;
 
@@ -164,21 +207,3 @@
 
 
 }
-
-
-
-progress {
-    color: lightblue;
-  }
-  
-  progress::-moz-progress-bar {
-    background: lightblue;
-  }
-  
-  progress::-webkit-progress-value {
-    background: red;
-  }
-  
-  progress::-webkit-progress-bar {
-    background: blue;
-  }
