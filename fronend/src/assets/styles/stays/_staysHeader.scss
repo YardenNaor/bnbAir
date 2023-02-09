@@ -1,54 +1,11 @@
-.Title{
+.TitleContant{
+    grid-column: 2;
+    width: 100%;
+    position: relative;
 
-    //Mobaile
-    @include for-mobile-layout {
-        
-
+    .titles-container{
+        padding-top: em(24px);
     }
-
-
-    // // Narrow:
-    // @include for-narrow-layout {
-    //     background-color: rgb(144, 36, 36);
-
-    // }
-
-    // Normal:
-    @include for-normal-layout {
-        padding: 0px 40px;
-
-
-        .titles-container{
-
-            margin: 0px;
-        }
-    
-        .tite-text{
-
-            padding-top: 24px;
-        }
-        
-    }
-
-    // Wide:
-    @include for-wide-layout {
-        
-        padding: 0px 80px;
-
-
-        .titles-container{
-            margin: 0px 34.5px;
-        }
-    
-        .tite-text{
-
-            padding-top: 24px;
-        }
-    }
-
-   
-
-    
 }
 
 .secendTitl{
@@ -57,13 +14,13 @@
     align-items: flex-end;
 }
 
-.reviwTitle{
+.startTitle{
     display: flex;
     justify-content: flex-end;
     margin-top: 8px;
 }
 
-.stay-name{
+.titleStay{
     font-size: 26px;
 }
 

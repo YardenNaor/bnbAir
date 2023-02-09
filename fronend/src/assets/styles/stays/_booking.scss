@@ -1,44 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
 .booking {
+    grid-area: detailsRight;
     font-family: 'Circular';
-    width: 33.333%;
 
-    //Mobaile
-    @include for-mobile-layout {
-        
-
-    }
-
-
-    // // Narrow:
-    // @include for-narrow-layout {
-    //     background-color: rgb(144, 36, 36);
-
-    // }
-
-    // Normal:
-    @include for-normal-layout {
-        
-        margin-left: 150px;
-        width: 342.667px;
-        
-    }
-
-    // Wide:
-    @include for-wide-layout {
-        
-        margin-left: 150px;
-    }   
-
-    
-    .date-filter {
-        // background-color: #de1361;
+    .date-filter.booking {
+// background-color: aqua;
         // width: max-content;
         position: absolute;
-        left: 28vw;
-        top: 50vh;
-        z-index: 5;
+        left:28vw;
+        top:50vh;
+        // background-color: aqua;
+        z-index: 6;
+        // right:0;
+        
 
         .close-btn {
             color: $clr1;
@@ -47,7 +22,6 @@
             width: 70px;
             padding: em(10px);
             border-radius: 1rem;
-            position: absolute;
         }
     }
 
@@ -57,43 +31,21 @@
 
     .bookingBox {
         position: sticky;
+        // display: flex;
         flex-direction: column;
+        margin-left: 90px;
         margin-top: 37px;
         margin-bottom: 46px;
         top: 127px;
+        height: 460px;
+        width: 368px;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
         padding: 24px;
         outline: 1px solid $clr5;
         border-radius: 12px;
         z-index: 3;
-        
-         //Mobaile
-    @include for-mobile-layout {
-        
-
-    }
 
 
-    // // Narrow:
-    // @include for-narrow-layout {
-    //     background-color: rgb(144, 36, 36);
-
-    // }
-
-    // Normal:
-    @include for-normal-layout {
-        
-        // margin-left: 97px;
-    
-        
-    }
-
-    // Wide:
-    @include for-wide-layout {
-        
-        width: 100%;
-    }   
-        
     }
 
 
@@ -101,7 +53,7 @@
     .boxContantTop {
 
         height: 112px;
-        // width: 322px;
+        width: 322px;
         border-radius: 5px;
         position: relative;
         top: 20px;
@@ -128,7 +80,6 @@
     }
 
     .checkInBtn {
-        position: relative;
         margin: 0px;
         min-height: 50%;
         outline: 1px solid $clr5;
@@ -151,7 +102,7 @@
             margin: 0;
         }
 
-        
+
     }
 
     .times {
@@ -159,7 +110,7 @@
         display: grid;
         outline: 1px solid $clr5;
 
-       
+
     }
 
     .guests {
@@ -260,7 +211,6 @@
         justify-content: center;
         align-items: center;
         min-height: 48px;
-        min-width: 200px;
         padding: 6px 1px;
         margin-block-start: 40px;
         background-color: #de1361;

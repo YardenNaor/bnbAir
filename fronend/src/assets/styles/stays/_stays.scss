@@ -1,44 +1,16 @@
 .stays{
+   display: grid;
    font-family:  -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;;
+   grid-template-columns: 20vw 1fr 20vw;
+   // minmax(auto,392px) 1fr minmax(auto,392px);
+   // grid-template-areas:
+   // ". main .";
 
-   > * {
+   .detailesMain{
+      // grid-area: main;
       grid-column: 2;
-      justify-content: center;
+
    }
-
-   //Mobaile
-    @include for-mobile-layout {
-        grid-template-columns: 
-        0px
-        minmax(auto,with-breakpoint)
-        0px;
-
-    }
-
-
-    // // Narrow:
-    // @include for-narrow-layout {
-    //     background-color: rgb(144, 36, 36);
-
-    // }
-
-    // Normal:
-    @include for-normal-layout {
-        grid-template-columns: 
-        minmax(40px,1fr)
-        minmax(auto,with-breakpoint)
-        minmax(40px,1fr);
-    }
-
-    // Wide:
-    @include for-wide-layout {
-        grid-template-columns: 
-        minmax(80px,1fr)
-        minmax(auto,with-breakpoint)
-        minmax(80px,1fr);
-    }
-
-   
 } 
 
 

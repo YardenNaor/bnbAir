@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { utilService } from '../../services/util.service.js'
-import { ReviewsMsg } from './reviewsMsg.jsx'
+import {ReviewsMsg} from './reviewsMsg.jsx'
 
-export function Reviwes({ stay, setCapacityModal }) {
+export function Reviwes({ stay ,setCapacityModal}) {
 
     const [avgRate, setAvgRate] = useState(0)
     const [numReviews, setNumReviews] = useState(0)
@@ -44,69 +44,64 @@ export function Reviwes({ stay, setCapacityModal }) {
 
     if (stay.reviews) {
         return <section className="reviwes" onClick={() => setCapacityModal(false)}>
-            <div className='reviwes-container'>
-                <div className='reviwes-txt'>
+            <div className="reviewTitle"> ★ {avgRate} · {numReviews}</div>
+            <div className="reviwesRate">
+                <div className='reviwesTable'>
 
-                    <div className="reviewTitle"> ★ {avgRate} · {numReviews}</div>
-                    <div className="reviwesRate">
-                        <div className='reviwesTable'>
-
-                            <div className="cleanliness scaleRate">
-                                <div className="rateTitle">Cleanliness</div>
-                                <div className='prograsDiv'>
-                                    <progress className='prograsBar' value={reviewsRate.Cleanliness} max="5"></progress>
-                                    <div className='rateNum'>{reviewsRate.Cleanliness}</div>
-                                </div>
-                            </div>
-
-                            <div className="cleanliness scaleRate">
-                                <div className="rateTitle">Accuracy</div>
-                                <div className='prograsDiv'>
-                                    <progress className='prograsBar' value={reviewsRate.Accuracy} max="5"></progress>
-                                    <div className='rateNum'>{reviewsRate.Accuracy}</div>
-                                </div>
-                            </div>
-
-                            <div className="communication scaleRate">
-                                <div className="rateTitle">Communication</div>
-                                <div className='prograsDiv'>
-                                    <progress className='prograsBar' value={reviewsRate.Communication} max="5"></progress>
-                                    <div className='rateNum'>{reviewsRate.Communication}</div>
-                                </div>
-                            </div>
-
-                            <div className="location scaleRate">
-                                <div className="rateTitle">Location</div>
-                                <div className='prograsDiv'>
-                                    <progress className='prograsBar' value={reviewsRate.Location} max="5"></progress>
-                                    <div className='rateNum'>{reviewsRate.Location}</div>
-                                </div>
-                            </div>
-
-                            <div className="checkIn scaleRate">
-                                <div className="rateTitle">Check-in</div>
-                                <div className='prograsDiv'>
-                                    <progress className='prograsBar' value={reviewsRate.CheckIn} max="5"></progress>
-                                    <div className='rateNum'>{reviewsRate.CheckIn}</div>
-                                </div>
-                            </div>
-
-                            <div className="value scaleRate">
-                                <div className="rateTitle">Value</div>
-                                <div className='prograsDiv'>
-                                    <progress className='prograsBar' value={reviewsRate.Value} max="5"></progress>
-                                    <div className='rateNum'>{reviewsRate.Value}</div>
-                                </div>
-                            </div>
+                    <div className="cleanliness scaleRate">
+                        <div className="rateTitle">Cleanliness</div>
+                        <div className='prograsDiv'>
+                            <progress className='prograsBar' value={reviewsRate.Cleanliness} max="5"></progress>
+                            <div className='rateNum'>{reviewsRate.Cleanliness}</div>
                         </div>
-
-                        <ReviewsMsg stay={stay} />
-
                     </div>
 
-                </div>
-            </div>
+                    <div className="cleanliness scaleRate">
+                        <div className="rateTitle">Accuracy</div>
+                        <div className='prograsDiv'>
+                            <progress className='prograsBar' value={reviewsRate.Accuracy} max="5"></progress>
+                            <div className='rateNum'>{reviewsRate.Accuracy}</div>
+                        </div>
+                    </div>
 
+                    <div className="communication scaleRate">
+                        <div className="rateTitle">Communication</div>
+                        <div className='prograsDiv'>
+                            <progress className='prograsBar' value={reviewsRate.Communication} max="5"></progress>
+                            <div className='rateNum'>{reviewsRate.Communication}</div>
+                        </div>
+                    </div>
+
+                    <div className="location scaleRate">
+                        <div className="rateTitle">Location</div>
+                        <div className='prograsDiv'>
+                            <progress className='prograsBar' value={reviewsRate.Location} max="5"></progress>
+                            <div className='rateNum'>{reviewsRate.Location}</div>
+                        </div>
+                    </div>
+
+                    <div className="checkIn scaleRate">
+                        <div className="rateTitle">Check-in</div>
+                        <div className='prograsDiv'>
+                            <progress className='prograsBar' value={reviewsRate.CheckIn} max="5"></progress>
+                            <div className='rateNum'>{reviewsRate.CheckIn}</div>
+                        </div>
+                    </div>
+
+                    <div className="value scaleRate">
+                        <div className="rateTitle">Value</div>
+                        <div className='prograsDiv'>
+                            <progress className='prograsBar' value={reviewsRate.Value} max="5"></progress>
+                            <div className='rateNum'>{reviewsRate.Value}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <ReviewsMsg stay={stay}/>
+
+
+
+            </div>
 
         </section>
     } else {

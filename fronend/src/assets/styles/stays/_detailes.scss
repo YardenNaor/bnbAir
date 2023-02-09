@@ -1,53 +1,13 @@
 .detailes {
-    //Mobaile
-    @include for-mobile-layout {
-        
-
-    }
-
-
-    // // Narrow:
-    // @include for-narrow-layout {
-    //     background-color: rgb(144, 36, 36);
-
-    // }
-
-    // Normal:
-    @include for-normal-layout {
-        padding: 0px 40px;
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
 
 
-        .detailes-container{
-            display: flex;
+    grid-template-areas:
 
-            margin: 0px;
-        }
-
-        .stayDetailes{
-            width: 558.25px;
-        }
-    
-    
-        
-    }
-
-    // Wide:
-    @include for-wide-layout {
-        
-        padding: 0px 80px;
-
-
-        .detailes-container{
-            display: flex;
-            margin: 0px 34.5px;
-            // background-color: aliceblue;
-        }
-        
-        .stayDetailes{
-            width: 653.333px;
-        }
-        
-    }
+        " detailsLeft detailsRight ";
 }
 
 .shortInfo {
@@ -164,7 +124,6 @@
 
 
 .aboutThisSpace {
-    
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 48px;
@@ -258,6 +217,7 @@
     font-weight: 400;
     padding: 48px 0px;
     border-bottom: 1px solid lightgray;
+    width: 100%;
 }
 
 .offersTitle {
@@ -266,6 +226,10 @@
     padding-bottom: 24px;
 }
 
+.offers {
+    max-width: 83.33333%;
+    padding-bottom: 16px;
+}
 
 .showAll {
     margin-top: 24px;
@@ -276,16 +240,14 @@
 
 .placeOffersContant {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    // width: 150%;
 }
 
 .offer {
-    width: 50%;
+    width: 300px;
+    // margin: 0px 8px;
     padding-bottom: 16px;
     display: flex;
-    flex-direction: row;
 }
 
 .offerImg {

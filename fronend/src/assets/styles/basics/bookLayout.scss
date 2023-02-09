@@ -1,92 +1,43 @@
 .book {
+    display: grid;
+    grid-template-columns: 20vw 1fr 20vw;
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    ;
+    grid-template-areas:
+        ". title ."
+        ". main . "
+        ". footer .";
 
-    //Mobaile
-    @include for-mobile-layout {}
-
-
-    // // Narrow:
-    // @include for-narrow-layout {
-    //     background-color: rgb(144, 36, 36);
-
-    // }
-
-    // Normal:
-    @include for-normal-layout {}
-
-    // Wide:
-    @include for-wide-layout {
-        .RequestTitle {
-            font-size: 16px;
-            padding: 0px 80px;
-        }
-
-
-        .RequestTitleContant {
-            line-height: 20px;
-            padding-bottom: 16px;
-            padding-top: 64px;
-            padding-bottom: 32px;
-            margin: 0px 34.5px;
-            display: flex;
-        }
-
-        .RequestTitleContantTitle {
-            font-size: 32px;
-            font-weight: 600;
-
-        }
+    .RequestTitle {
+        grid-area: title;
+        font-size: 16px;
+        padding-bottom: 32px;
     }
 
+    .backto {
+        font-size: 16px;
+        line-height: 20px;
+        padding-right: 32px;
+    }
 
+    .RequestTitleContant {
+        line-height: 20px;
+        padding-bottom: 16px;
+        padding-top: 64px;
+        display: flex;
+    }
 
-
-
+    .RequestTitleContantTitle {
+        font-size: 32px;
+        font-weight: 600;
+    }
 
     .mainBook {
-
-        //Mobaile
-        @include for-mobile-layout {}
-
-
-        // // Narrow:
-        // @include for-narrow-layout {
-        //     background-color: rgb(144, 36, 36);
-
-        // }
-
-        // Normal:
-        @include for-normal-layout {}
-
-        // Wide:
-        @include for-wide-layout {
-            padding: 0px 80px;
-
-        }
-
-
-        .mainBookContant {
-            display: flex;
-            flex-direction: row;
-
-            //Mobaile
-            @include for-mobile-layout {}
-
-
-            // // Narrow:
-            // @include for-narrow-layout {
-            //     background-color: rgb(144, 36, 36);
-
-            // }
-
-            // Normal:
-            @include for-normal-layout {}
-
-            // Wide:
-            @include for-wide-layout {
-                margin: 0px 34.5px;
-            }
-        }
+        grid-area: main;
+        display: flex;
+        justify-content: space-between;
 
         .pay {
             position: relative;
@@ -277,54 +228,17 @@
 
 
         .details {
-            display: flex;
-            justify-content: flex-end;
-
-            //Mobaile
-            @include for-mobile-layout {}
-
-
-            // // Narrow:
-            // @include for-narrow-layout {
-            //     background-color: rgb(144, 36, 36);
-
-            // }
-
-            // Normal:
-            @include for-normal-layout {}
-
-            // Wide:
-            @include for-wide-layout {
-                margin-left: 95px;
-            }
-
-
+            margin-left: 90px;
+            position: relative;
+            width: 466.667px;
 
             .detailsBox {
                 position: sticky;
                 top: 80px;
-                padding-bottom: 24px;
-                padding-left: 24px;
-                //Mobaile
-                @include for-mobile-layout {}
-
-
-                // // Narrow:
-                // @include for-narrow-layout {
-                //     background-color: rgb(144, 36, 36);
-
-                // }
-
-                // Normal:
-                @include for-normal-layout {}
-
-                // Wide:
-                @include for-wide-layout {
-                }
-
+                width: 466.667px;
 
                 .detailsBoxContant {
-                    font-family: $font1;
+                    font-family:$font1;
                     border-bottom-color: rgb(221, 221, 221);
                     border-bottom-left-radius: 12px;
                     border-bottom-right-radius: 12px;
@@ -490,7 +404,7 @@
             width: 90%;
             // padding-bottom: 20px;
 
-            &:last-of-type {
+            &:last-of-type{
                 margin-bottom: 0;
             }
         }

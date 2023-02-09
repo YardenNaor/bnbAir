@@ -49,9 +49,9 @@ export function AppHeader({ }) {
     }
 
     let divName = `app-header main-layout full ${isFilterShown ? ' big' : ''}`
-    if ((location.match(`/stays`) && !location.match(`/book`))) divName += ' stay stays'
+    if ((location.match(`/stay`) && !location.match(`/book`))) divName += ' stay stays'
     else if (location.match(`/trip`)) divName += ` trip`
-    else if (location.match(`/stays/book`)) divName += ` book`
+    else if (location.match(`/stay/book`)) divName += ` book`
     else if (location.match(`/hostManage`)) divName += ` hostManage`
     else if (location.match('/')) divName += `index`
 
@@ -119,6 +119,8 @@ export function AppHeader({ }) {
         let txt = currFilterBy.capacity.total ? currFilterBy.capacity.total + guestsTxt : 'Add guests'
         return txt
     }
+
+  console.log(divName)
 
     const { timeStampStart, timeStampEnd } = currFilterBy.datesRange
     return (
