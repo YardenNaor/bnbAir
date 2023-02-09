@@ -35,7 +35,7 @@ async function getAllStays() {
 
 async function query(filterBy = {}) {
     try {
-        const stays = await httpService.get(ROUTE,  filterBy )
+        const stays = await httpService.get(ROUTE, { filterBy })
         return stays
     } catch (err) {
         console.log('err:', err)

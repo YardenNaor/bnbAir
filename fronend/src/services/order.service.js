@@ -1,7 +1,4 @@
 import { httpService } from './http.service'
-import { SOCKET_EVENT_ORDER_FOR_HOST, socketService, SOCKET_EVENT_ORDER_FOR_USER } from './socket.service';
-import { store } from '../store/store';
-
 
 const STORAGE_KEY = 'order'
 
@@ -15,21 +12,7 @@ export const orderService = {
 
 const ROUTE = 'order'
 
-
-;(() => {
-  socketService.on(SOCKET_EVENT_ORDER_FOR_USER, (order) => {
-      // showSuccessMsg(`Your order was ${order.status}`)
-      store.dispatch({type: 'UPDATE_ORDER', order})
-  })
-  socketService.on(SOCKET_EVENT_ORDER_FOR_HOST, (order) => {
-      // showSuccessMsg(`Order received`)
-      store.dispatch({type: 'ADD_ORDER', order})
-  })
-})()
-
-
 function query(filterBy = {}) {
-  // console.log('hi from query at orderservice:',)
   return httpService.get(ROUTE, { filterBy })
 }
 
@@ -41,6 +24,12 @@ function getById(orderId) {
 
 
 }
+// function getByBuyerId(userId) {
+//   return httpService.get(`${ROUTE}/${userId}`)
+// }
+// function getByHostId(hostId) {
+//   return httpService.get(`${ROUTE}/${hostId}`)
+// }
 
 function remove(orderId) {
   return httpService.delete(`${ROUTE}/${orderId}`)

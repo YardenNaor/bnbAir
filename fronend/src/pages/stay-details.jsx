@@ -6,7 +6,7 @@ import { stayService } from '../services/stay.service.js'
 import { orderService } from '../services/order.service.js'
 
 
-import { TitleContant } from '../cmps/stays/titleContant.jsx'
+import { Title } from '../cmps/stays/titleContant.jsx'
 
 import { Detailes } from '../cmps/stays/detailes.jsx'
 import { Reviwes } from '../cmps/stays/reviwes.jsx'
@@ -17,12 +17,14 @@ import { ToKnow } from '../cmps/stays/toKnow.jsx'
 import { FirstFooter } from '../cmps/stays/firstFooter.jsx'
 import { SecendFooter } from '../cmps/stays/secendFooter.jsx'
 import { Galery } from '../cmps/stays/galery.jsx'
+import {Chat} from '../cmps/stays/chat.jsx'
 import { useSearchParams } from 'react-router-dom'
 
 
 export function StayDetails() {
 
     const [searchParams] = useSearchParams();
+    const loggedinUser = useSelector((state) => state.userModule.user)
 
     let { id } = useParams()
 
@@ -136,13 +138,14 @@ export function StayDetails() {
     return <section className='stays' onClick={handleClick} >
 
         <div className='detailesMain'>
-            <TitleContant stay={stay} setCapacityModal={setCapacityModal} />
+            <Title stay={stay} setCapacityModal={setCapacityModal} />
             <Galery stay={stay} setCapacityModal={setCapacityModal} />
 
             <Detailes dates={dates} setDates={setDates} stay={stay} order={order} guestsNum={guestsNum} setguests={setguests} guests={guests} capacityModal={capacityModal} setCapacityModal={setCapacityModal} setDateModal={setDateModal} dateModal={dateModal} />
 
 
             <Reviwes stay={stay} setCapacityModal={setCapacityModal} />
+            <Chat loggedinUser={loggedinUser} stay={stay} />
             {/* <FirstFooter setCapacityModal={setCapacityModal} /> */}
         </div>
 

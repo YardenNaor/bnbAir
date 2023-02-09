@@ -1,7 +1,6 @@
-
 // mixins
 @mixin for-mobile-layout {
-    @media (max-width: $padded-break-narrow) {
+    @media (min-width: $padded-break-mobile) {
         @content;
     }
 }
@@ -9,18 +8,21 @@
 @mixin for-narrow-layout {
     @media (min-width: $padded-break-narrow) {
         @content;
+
     }
 }
 
 @mixin for-normal-layout {
     @media (min-width : $padded-break-normal) {
         @content;
+
     }
 }
 
 @mixin for-wide-layout {
     @media(min-width: $padded-break-wide) {
         @content;
+
     }
 }
 
@@ -28,6 +30,7 @@
 @mixin getMainLayout($width) {
     grid-template-columns:
         minmax(layoutPadding, 1fr) minmax(auto, $width) minmax(layoutPadding, 1fr);
+
 }
 
 
@@ -61,31 +64,33 @@
 @mixin aspect-ratio($width, $height) {
     position: relative;
     overflow: hidden;
+
     &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: calc(($height / $width) * 100%);
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: calc(($height / $width) * 100%);
     }
-    > * {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
-  
-    > img {
-      height: 100%;
-      object-fit: cover;
+
+    >img {
+        height: 100%;
+        object-fit: cover;
     }
-  }
-  
-  // Mixin for removing hover efects on iphone screen
-  @mixin hover-supported {    
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
     @media not all and (pointer: coarse) {
         &:hover {
             @content;
         }
     }
-  }
+}

@@ -6,15 +6,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { loadOrders, loadOrder, addOrder, updateOrder, removeOrder } from '../store/order.action'
 import { OrderShow } from '../cmps/stayMnegmant/orders'
 import { StaysShow } from '../cmps/stayMnegmant/stays'
-import { getMyOrders } from '../store/order.action'
-
 
 
 
 export function StayManagement() {
     const loggedinUser = useSelector((state) => state.userModule.user)
-    const orders = useSelector((state) => state.orderModule.orders)
-
+    // const isUserModalShown = useSelector((state) => state.stayModule.isUserModalShown)
 
     const [myStays, setMyStays] = useState([])
     const [myOrders, setMyOrders] = useState([])
@@ -25,30 +22,22 @@ export function StayManagement() {
     useEffect(() => {
         loadOrders()
         getMyStays()
-        getMyOrders({ hostId: loggedinUser._id })
-        console.log('orders at StayManagement:', orders)
-        setMyOrders(orders)
+        getMyOrders()
     }, [])
-
-    useEffect(() => {
-        setMyOrders(orders)
-    }, [orders])
-
 
 
     useEffect(() => {
         numOfPending()
     }, [myOrders])
 
-    // async function getMyOrders() {
-    //     try {
-    //         getMyOrders()
-    //         const orders = await orderService.query({ hostId: loggedinUser._id })
-    //         setMyOrders(orders)
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // }
+    async function getMyOrders() {
+        try {
+            const orders = await orderService.query({ hostId: loggedinUser._id })
+            setMyOrders(orders)
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
     async function getMyStays() {
         try {
@@ -65,13 +54,13 @@ export function StayManagement() {
     }
 
     async function changStatus(orderId, status) {
-        console.log('orderId at changStatus:', orderId)
+        console.log('orderId at changStatus:',orderId)
         try {
             const orderToUp = await loadOrder(orderId)
             console.log('orderToUp at changStatus', orderToUp)
             orderToUp.status = status
             updateOrder(orderToUp)
-            getMyOrders({ hostId: loggedinUser._id })
+            getMyOrders()
         } catch (err) {
             console.log('failed to load order:')
         }

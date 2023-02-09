@@ -48,7 +48,7 @@ export function OrderShow({ loggedinUser, pendingNum, myOrders, changStatus }) {
         <div className='menegmentTable'>
             {
                 myOrders.map(order => {
-                   
+                    console.log('order at orders:',order)
                     const usrPic = randImg()
                     // console.log('order at rendrung:',order)
                     return <section className={`tableRow cell ${order.status === 'Pending' && 'pendingStatus'}`} key={order._id}>

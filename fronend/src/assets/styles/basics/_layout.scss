@@ -3,6 +3,7 @@
 
     display: grid;
     grid-template-columns:  $layoutPadding 1fr $layoutPadding;
+    
 
     >* {
         grid-column: 2;
@@ -12,20 +13,32 @@
         }
     }
 
-    // Narrow:
-    @include for-narrow-layout {
-        @include getMainLayout($break-narrow)
-    }
+    // //Mobaile
+    // @include for-mobile-layout {
+    //     background-color: aquamarine;
 
-    // Normal:
-    @include for-normal-layout {
-        @include getMainLayout($break-normal)
-    }
+    // }
 
-    // Wide:
-    @include for-wide-layout {
-        @include getMainLayout($break-wide)
-    }
+
+    // // Narrow:
+    // @include for-narrow-layout {
+    //     background-color: rgb(144, 36, 36);
+
+    // }
+
+    // // Normal:
+    // @include for-normal-layout {
+    //     background-color: rgb(36, 62, 53);
+    // }
+
+    // // Wide:
+    // @include for-wide-layout {
+    //     background-color: rgb(135, 135, 185);
+    //     grid-template-columns: 
+    //     minmax(20px,1fr)
+    //     minmax(auto,with-breakpoin)
+    //     minmax(20px,1fr);
+    // }
 }
 
 .try {

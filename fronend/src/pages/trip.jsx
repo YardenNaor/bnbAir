@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { userService } from '../services/user.service'
-import { getMyOrders } from '../store/order.action'
+
 import { StayManagement } from "../pages/stay-management"
 import { orderService } from '../services/order.service'
 import { ChartBuyer } from '../cmps/chart-buyer'
@@ -10,11 +10,10 @@ import { stayService } from '../services/stay.service'
 export function Trip() {
 
     const loggedinUser = useSelector((state) => state.userModule.user)
-    const orders = useSelector((state) => state.orderModule.orders)
     const [myOrders, setMyOrders] = useState(null)
-    // const [numStatusPending, setNumStatusPending] = useState(null)
-    // const [numStatusApproved, setNumStatusApproved] = useState(null)
-    // const [numStatusDeclined, setNumStatusDeclined] = useState(null)
+    const [numStatusPending, setNumStatusPending] = useState(null)
+    const [numStatusApproved, setNumStatusApproved] = useState(null)
+    const [numStatusDeclined, setNumStatusDeclined] = useState(null)
     const [isImagesLoaded, setIsImagesLoaded] = useState(false)
 
 
@@ -25,32 +24,31 @@ export function Trip() {
 
     useEffect(() => {
         if (!loggedinUser) return
-        const buyerId = loggedinUser._id
-        getMyOrders({ buyerId })
-        // setMyOrders(orders)
-        // loadStayImages(orders)
+        const userId = loggedinUser._id
+        getMyOrders()
+
     }, [])
 
     useEffect(() => {
-        setMyOrders(orders)
-        loadStayImages(orders)
-    }, [orders])
-
+        console.log(numStatusApproved)
+        console.log(numStatusDeclined)
+        console.log(numStatusPending)
+    }, [numStatusApproved, numStatusDeclined, numStatusPending, myOrders])
 
     // console.log('hi'!)
     async function loadStayImages(data) {
-        // console.log(data)
+        console.log(data)
         const arrStays = []
         const staysLocations = []
         const staysLocatCity = []
         const staysLocatCountry = []
         try {
             for (const item in data) {
-                // console.log(item)
+                console.log(item)
                 const stayId = data[item].stay._id
                 // console.log(stayId)
                 const stayById = await stayService.getById(stayId)
-                // console.log(stayById)
+                console.log(stayById)
                 const location = `${stayById.loc.city}, ${stayById.loc.country}`
                 const locCity = `${stayById.loc.city} ,`
                 const locCountry = `${stayById.loc.country}`
@@ -72,7 +70,7 @@ export function Trip() {
         } catch (err) {
             console.log('err', err)
         }
-        // console.log(data)
+        console.log(data)
     }
 
     function numStatusOrder(orders) {
@@ -89,7 +87,23 @@ export function Trip() {
         return objStatus
     }
 
+    async function getMyOrders() {
+        try {
+            const orders = await orderService.query({ buyerId: loggedinUser._id })
+            setMyOrders(orders)
 
+            const objStatus = numStatusOrder(orders)
+            setNumStatusPending(objStatus.pending)
+            setNumStatusApproved(objStatus.approved)
+            setNumStatusDeclined(objStatus.declined)
+
+            console.log(objStatus)
+            loadStayImages(orders)
+
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
     return <div>
         {!isImagesLoaded && <div class="loader"></div>}

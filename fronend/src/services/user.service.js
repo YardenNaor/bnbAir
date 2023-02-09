@@ -1,6 +1,5 @@
 // import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
-import { socketService } from './socket.service';
 
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 const STORAGE_KEY = 'user'
@@ -99,7 +98,7 @@ async function login(userCred) {
         // const user = await users.find(user => user.username === userCred.username)
         const user = await httpService.post('auth/login', userCred)
         if (user) {
-            socketService.login(user._id)
+            // socketService.login(user._id)
             return saveLocalUser(user)
         } else {
             throw new Error
@@ -115,14 +114,14 @@ async function signup(userCred) {
     userCred.wishList = []
     // const user = await storageService.post(STORAGE_KEY, userCred)
     const user = await httpService.post('auth/signup', userCred)
-    socketService.login(user._id)
+    // socketService.login(user._id)
     return saveLocalUser(user)
 }
 
 async function logout() {
     sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
     console.log('log out succesfully:')
-    socketService.logout()
+    // socketService.logout()
     return await httpService.post('auth/logout')
 }
 

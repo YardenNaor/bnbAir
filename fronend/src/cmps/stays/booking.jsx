@@ -118,10 +118,13 @@ export function Booking({ dates, img, setDates, stay, guestsNum, guests, setgues
             </div>
             {capacityModal && <CapacityBooking addGuest={addGuest} guests={guests} dates={dates} />}
             {dateModal && <div className='calender'>
-                <div className="full-screen show" onClick={() => setDateModal(false)} ></div>
-                <DateFilter 
-                handleChange={handleChange} isBooking={true} 
-                setDateModal={setDateModal} /></div>}
+
+                <div className="full-screen transparent show"
+                    onClick={() => setDateModal(false)}></div>
+                <DateFilter
+
+                    handleChange={handleChange} isBooking={true}
+                    setDateModal={setDateModal} /></div>}
             <Link to={`/stay/book/${stay.host._id}/${dates.timeStart}/${dates.timeEnd}/${guests.Adults}/${guests.Kids}/${guests.Infants}/${guests.Pets}/${price.total}/${stay._id}`} className="reservBtn">Reserve</Link>
 
             <div className='wontharged'>You won't be charged yet</div>
